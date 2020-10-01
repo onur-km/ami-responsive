@@ -1,0 +1,149 @@
+@import "scss/bootstrap";
+
+.ratio
+{
+	&.viewport-ratio
+	{
+		// 4by2.06
+		&::before
+		{
+			padding-top: 51.4298%;
+		}
+	}
+
+	&.desktop-ratio
+	{
+		// 4by2.4147
+		&::before
+		{
+			padding-top: 60.3675%;
+		}
+	}
+
+	&.laptop-ratio
+	{
+		// 4by2.5072
+		&::before
+		{
+			padding-top: 62.68%;
+		}
+	}
+
+	&.tablet-ratio
+	{
+		// 4by5.3532
+		&::before
+		{
+			padding-top: 133.83%;
+		}
+	}
+
+	&.mobile-ratio
+	{
+		// 4by8.6604
+		&::before
+		{
+			padding-top: 216.51%;
+		}
+	}
+}
+
+
+.devices
+{
+	position: relative;
+
+	.frame
+	{
+		position: absolute;
+		z-index: 1;
+		background: rgba(red, .5);
+		height: auto;
+		bottom: auto;
+		top: auto;
+		left: auto;
+		right: auto;
+
+		&.desktop
+		{
+			top: 8.76077838%;
+			left: 19.5084522%;
+			width: 49.72975140%;
+		}
+
+		&.laptop
+		{
+			bottom: 7.530226248%;
+			right: 6.62105854%;
+			width: 35.2682919%;
+			z-index: 2;
+		}
+
+		&.tablet
+		{
+			bottom: 7.89924064%;
+			left: 8.971507618%;
+			width: 18.885926222%;
+			border-top-left-radius: 2% 1.5%;
+			border-top-right-radius: 2% 1.5%;
+			border-bottom-right-radius: 2% 1.5%;
+			border-bottom-left-radius: 2% 1.5%;
+			z-index: 2;
+		}
+
+		&.mobile
+		{
+			bottom: 4.00687633%;
+			left: 2.196639935%;
+			width: 7.0254931836%;
+			border-top-left-radius: 8% 5%;
+			border-top-right-radius: 8% 5%;
+			border-bottom-right-radius: 8% 5%;
+			border-bottom-left-radius: 8% 5%;
+			z-index: 3;
+		}
+	}
+
+	svg
+	{
+		width: 100%;
+		position: relative;
+	}
+
+	.figure
+	{
+		position: relative;
+
+		&.desktop
+		{
+			z-index: 1;
+		}
+		&.laptop
+		{
+			z-index: 2;
+		}
+		&.tablet
+		{
+			z-index: 2;
+		}
+		&.mobile
+		{
+			z-index: 3;
+		}
+	}
+
+	&.mobile
+	{
+		.figure
+		{
+			&.mobile
+			{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 4;
+			}
+		}
+	}
+}
